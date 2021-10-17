@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "avatars",
+  "info": {
+    "name": "Avatar"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "avatar": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "description": {
+      "type": "string",
+      "regex": "[a-zA-ZąćęłńóśźżĄĘŁŃÓŚŹŻぁ-んァ-ヾ一-龯]",
+      "required": true,
+      "unique": false,
+      "minLength": 5,
+      "private": false
+    },
+    "avatar_user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}
