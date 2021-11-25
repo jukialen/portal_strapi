@@ -518,7 +518,8 @@
         "required": [
           "id",
           "multimedia",
-          "description"
+          "description",
+          "tags"
         ],
         "properties": {
           "id": {
@@ -652,13 +653,27 @@
               }
             }
           },
+          "tags": {
+            "type": "string",
+            "enum": [
+              "drawings",
+              "realistic",
+              "manga",
+              "anime",
+              "comics",
+              "photographs",
+              "animations",
+              "others"
+            ]
+          },
           "localizations": {
             "type": "array",
             "items": {
               "required": [
                 "id",
                 "multimedia",
-                "description"
+                "description",
+                "tags"
               ],
               "properties": {
                 "id": {
@@ -675,6 +690,19 @@
                 },
                 "user": {
                   "type": "string"
+                },
+                "tags": {
+                  "type": "string",
+                  "enum": [
+                    "drawings",
+                    "realistic",
+                    "manga",
+                    "anime",
+                    "comics",
+                    "photographs",
+                    "animations",
+                    "others"
+                  ]
                 },
                 "localizations": {
                   "type": "array",
@@ -708,7 +736,8 @@
       },
       "NewFiles": {
         "required": [
-          "description"
+          "description",
+          "tags"
         ],
         "properties": {
           "description": {
@@ -717,6 +746,19 @@
           },
           "user": {
             "type": "string"
+          },
+          "tags": {
+            "type": "string",
+            "enum": [
+              "drawings",
+              "realistic",
+              "manga",
+              "anime",
+              "comics",
+              "photographs",
+              "animations",
+              "others"
+            ]
           },
           "localizations": {
             "type": "array",

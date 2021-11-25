@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "files",
   "info": {
-    "name": "Files"
+    "name": "Files",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -45,6 +46,26 @@
       "plugin": "users-permissions",
       "model": "user",
       "via": "files"
+    },
+    "tags": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "drawings",
+        "realistic",
+        "manga",
+        "anime",
+        "comics",
+        "photographs",
+        "animations",
+        "others"
+      ],
+      "required": true,
+      "unique": false
     }
   }
 }
